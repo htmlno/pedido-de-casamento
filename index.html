@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quer casar comigo?</title>
+
+  <style>
+    body {
+      background: #f7c6d0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      padding: 70px;
+      border-radius: 40px;
+      text-align: center;
+      position: relative;
+      width: 520px;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #sim {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #nao {
+      background: #ddd;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Quer casar comigo? 💍❤️</h2>
+
+    <button id="sim" onclick="simClick()">SIM</button>
+    <button id="nao">NÃO</button>
+  </div>
+
+  <script>
+    const naoBtn = document.getElementById("nao");
+
+    naoBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 220;
+      const y = Math.random() * 160;
+      naoBtn.style.left = x + "px";
+      naoBtn.style.top = y + "px";
+    });
+
+    function simClick() {
+      window.location.href = "sim.html";
+    }
+  </script>
+
+</body>
+</html>
